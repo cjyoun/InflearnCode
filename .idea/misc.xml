@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken1.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken2.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken3.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken4.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken5.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_level1.xml" value="0.22146739130434784" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_picture.xml" value="0.36614583333333334" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
