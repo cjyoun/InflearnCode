@@ -14,16 +14,24 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".level1.Level1Activity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
+
+            <!-- 앱 실행 시 해당 activity를 맨 처음 호출하게 하는 것 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- ===================================================== -->
+        </activity>
+        <activity
+            android:name=".level1.Level1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
