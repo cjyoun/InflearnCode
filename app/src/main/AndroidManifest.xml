@@ -14,6 +14,15 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".level1.wisesaying.WiseSayingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".level1.dice.DiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".level1.picturechicken.Chicken1Activity"
             android:exported="false" />
         <activity
@@ -52,9 +61,6 @@
         <activity
             android:name=".level1.Level1Activity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

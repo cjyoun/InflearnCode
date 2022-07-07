@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.inflearncode.R
+import com.example.inflearncode.level1.dice.DiceActivity
 import com.example.inflearncode.level1.picturechicken.ChickenPictureActivity
 import com.example.inflearncode.level1.picturepizza.PizzaPictureActivity
 
@@ -25,6 +26,13 @@ class Level1Activity : AppCompatActivity() {
         goPizzaPictureBtn.setOnClickListener{
             val goPizzaPictureActivity = Intent(this, PizzaPictureActivity::class.java)
             startActivity(goPizzaPictureActivity)
+        }
+
+        // 주사위 돌리기 페이지 이동
+        val goDiceBtn = findViewById<Button>(R.id.goDice)
+        goDiceBtn.setOnClickListener{
+            val goDiceActivity = Intent(this, DiceActivity::class.java)
+            startActivity(goDiceActivity)
         }
     }
 }
