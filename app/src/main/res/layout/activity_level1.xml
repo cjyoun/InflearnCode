@@ -32,11 +32,11 @@
 
 
     <Button
-        android:id="@+id/goLevel2"
+        android:id="@+id/goPizzaPicture"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="44dp"
-        android:text=""
+        android:text="피자 사진 보기 "
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -53,6 +53,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goLevel2" />
+        app:layout_constraintTop_toBottomOf="@+id/goPizzaPicture" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

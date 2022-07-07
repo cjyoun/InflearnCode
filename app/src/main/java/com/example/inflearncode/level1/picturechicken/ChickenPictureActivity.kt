@@ -11,7 +11,7 @@ class ChickenPictureActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_chicken_picture)
 
 
         val image1 = findViewById<ImageView>(R.id.chickenImage1)

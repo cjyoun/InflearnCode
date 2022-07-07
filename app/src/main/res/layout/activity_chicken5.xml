@@ -7,7 +7,7 @@
     tools:context=".level1.picturechicken.Chicken5Activity">
 
     <ImageView
-        android:src="@drawable/chicken1"
+        android:src="@drawable/chicken5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
