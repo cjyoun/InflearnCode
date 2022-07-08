@@ -2,6 +2,7 @@ package com.example.inflearncode.level1.wisesaying
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.inflearncode.R
 import com.example.inflearncode.databinding.ActivitySentenceBinding
@@ -31,7 +32,9 @@ class SentenceActivity : AppCompatActivity() {
         // id값 sentenceListView 라고 되어있는 ListView의 adapter에 아까 만든 Adapter 넣기
         listView.adapter = sentenceAdapter
 
-
+        listView.setOnItemClickListener { parent, view, position, id ->
+            Toast.makeText(this, sentenceList[position],Toast.LENGTH_SHORT).show()
+        }
 
     }
 
