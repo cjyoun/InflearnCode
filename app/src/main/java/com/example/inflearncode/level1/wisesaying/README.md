@@ -14,3 +14,6 @@ xml text에서 fontFamily="@font/폰트파일명" 으로 가져오기
 1. 아이템 xml을 생성
 2. Adapter 생성
 3. 메인 xml에서 list를 만들어 adapter에 보내고 이를 출력
+
+# 명언 출력
+랜덤으로 명언이 출력되며 출력될 수 있는 전체 명언을 보여줌 
