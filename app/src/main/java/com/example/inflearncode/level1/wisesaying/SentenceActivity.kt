@@ -1,26 +1,21 @@
 package com.example.inflearncode.level1.wisesaying
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.inflearncode.R
-import com.example.inflearncode.databinding.ActivityWiseSayingBinding
+import com.example.inflearncode.databinding.ActivitySentenceBinding
 
-class WiseSayingActivity : AppCompatActivity() {
+class SentenceActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityWiseSayingBinding
+    private lateinit var binding : ActivitySentenceBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wise_saying)
+        setContentView(R.layout.activity_sentence)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_wise_saying)
-
-        binding.goSentenceView.setOnClickListener {
-            val intent = Intent(this, SentenceActivity::class.java)
-            startActivity(intent)
-        }
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_sentence)
 
         val sentenceList = mutableListOf<String>()
         sentenceList.add("노는 것도 일하는 것 만큼 중요하다.")
@@ -29,8 +24,15 @@ class WiseSayingActivity : AppCompatActivity() {
         sentenceList.add("뛰어난 말에게도 체력이 필요하다.")
         sentenceList.add("그 사람 입장에 서기 전까지 절대 그 사람을 욕하거나 탓하지 마라.")
 
-        binding.sentenceArea.text = sentenceList.random()   // sentenceList값을 랜덤으로 가져옴
+        // List를 adapter에 넘겨주기
+        val sentenceAdapter = SentenceListViewAdapter(sentenceList)
+        val listView = binding.sentenceListView
+
+        // id값 sentenceListView 라고 되어있는 ListView의 adapter에 아까 만든 Adapter 넣기
+        listView.adapter = sentenceAdapter
+
 
 
     }
+
 }
