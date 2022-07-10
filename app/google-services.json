@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "360500886431",
+    "project_id": "inflearncode-firebase",
+    "storage_bucket": "inflearncode-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360500886431:android:ea91ce0736efb49aa89baa",
+        "android_client_info": {
+          "package_name": "com.example.inflearncode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360500886431-qf3lmgi7bn1289pk7nenrkehk3rets6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf9iw7fYzpKtv8r0903AYOy3RNvs_d2Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360500886431-qf3lmgi7bn1289pk7nenrkehk3rets6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
