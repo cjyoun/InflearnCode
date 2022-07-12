@@ -53,6 +53,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-auth-ktx' // firebase 로그인
 
+    implementation 'com.google.firebase:firebase-database-ktx'  // firebase realtime database
+
 
 
 }

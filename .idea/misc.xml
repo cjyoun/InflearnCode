@@ -8,25 +8,24 @@
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken3.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken4.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken5.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_diet.xml" value="0.1578125" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_image_inside.xml" value="0.15416666666666667" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_level1.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_music.xml" value="0.1" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_picture.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_pizza1.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_pizza_picture.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_sentence.xml" value="0.15416666666666667" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_splash.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_splash_pizza.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/activity_chicken1.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_chicken2.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_chicken3.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_chicken4.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_chicken5.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_chicken_picture.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_dice.xml" value="0.1625" />
-        <entry key="app/src/main/res/layout/activity_diet.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_diet_memo.xml" value="0.17760416666666667" />
-        <entry key="app/src/main/res/layout/activity_diet_memo_splash.xml" value="0.1625" />
-        <entry key="app/src/main/res/layout/activity_level1.xml" value="0.34556159420289856" />
-        <entry key="app/src/main/res/layout/activity_pizza_picture.xml" value="0.34556159420289856" />
-        <entry key="app/src/main/res/layout/activity_wise_saying.xml" value="0.1625" />
-        <entry key="app/src/main/res/layout/cutom_dialog.xml" value="0.1765625" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_wise_saying.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/cutom_dialog.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/fragment_singer1.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/fragment_singer2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/fragment_singer3.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/music_rv_item.xml" value="0.190234375" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/sentence_listview_item.xml" value="0.153125" />
       </map>
     </option>
   </component>
