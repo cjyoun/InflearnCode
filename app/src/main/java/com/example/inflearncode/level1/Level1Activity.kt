@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.inflearncode.R
 import com.example.inflearncode.level1.dice.DiceActivity
-import com.example.inflearncode.level1.diet.DietActivity
+import com.example.inflearncode.level1.firebasepractice.FirebasePracticeActivity
 import com.example.inflearncode.level1.musiclist.MusicActivity
 import com.example.inflearncode.level1.picturechicken.ChickenPictureActivity
 import com.example.inflearncode.level1.picturepizza.PizzaPictureActivity
@@ -52,11 +52,21 @@ class Level1Activity : AppCompatActivity() {
             startActivity(goMusicListActivity)
         }
 
-        // 주사위 돌리기 페이지 이동
+
+        // firebase연습 페이지 이동
+        val goFirebasePracticeBtn = findViewById<Button>(R.id.goFirebasePractice)
+        goFirebasePracticeBtn.setOnClickListener{
+            val goFirebasePracticeActivity = Intent(this, FirebasePracticeActivity::class.java)
+            startActivity(goFirebasePracticeActivity)
+        }
+
+        // 다이어트 앱  페이지 이동
         val goDietBtn = findViewById<Button>(R.id.goDiet)
         goDietBtn.setOnClickListener{
-            val goDietActivity = Intent(this, DietActivity::class.java)
+            val goDietActivity = Intent(this, FirebasePracticeActivity::class.java)
             startActivity(goDietActivity)
         }
+
+
     }
 }
