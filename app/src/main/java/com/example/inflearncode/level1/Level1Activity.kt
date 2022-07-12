@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.inflearncode.R
 import com.example.inflearncode.level1.dice.DiceActivity
+import com.example.inflearncode.level1.diet.DietActivity
+import com.example.inflearncode.level1.musiclist.MusicActivity
 import com.example.inflearncode.level1.picturechicken.ChickenPictureActivity
 import com.example.inflearncode.level1.picturepizza.PizzaPictureActivity
+import com.example.inflearncode.level1.wisesaying.WiseSayingActivity
 
 class Level1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +36,27 @@ class Level1Activity : AppCompatActivity() {
         goDiceBtn.setOnClickListener{
             val goDiceActivity = Intent(this, DiceActivity::class.java)
             startActivity(goDiceActivity)
+        }
+
+        // 명언 보기 페이지 이동
+        val goWiseSayingBtn = findViewById<Button>(R.id.goWiseSaying)
+        goWiseSayingBtn.setOnClickListener{
+            val goWiseSayingActivity = Intent(this, WiseSayingActivity::class.java)
+            startActivity(goWiseSayingActivity)
+        }
+
+        // 음악리스트 보기 페이지 이동
+        val goMusicListBtn = findViewById<Button>(R.id.goMusicList)
+        goMusicListBtn.setOnClickListener{
+            val goMusicListActivity = Intent(this, MusicActivity::class.java)
+            startActivity(goMusicListActivity)
+        }
+
+        // 주사위 돌리기 페이지 이동
+        val goDietBtn = findViewById<Button>(R.id.goDiet)
+        goDietBtn.setOnClickListener{
+            val goDietActivity = Intent(this, DietActivity::class.java)
+            startActivity(goDietActivity)
         }
     }
 }

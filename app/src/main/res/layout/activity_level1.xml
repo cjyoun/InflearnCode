@@ -18,11 +18,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096" />
 
+
     <Button
         android:id="@+id/goChickenPicture"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:text="치킨 사진 보기"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,12 +31,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/level1TextView" />
 
-
     <Button
         android:id="@+id/goPizzaPicture"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:text="피자 사진 보기 "
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,12 +47,48 @@
         android:id="@+id/goDice"
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:text="주사위 돌리기"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goPizzaPicture" />
+
+    <Button
+        android:id="@+id/goWiseSaying"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:text="명언 보기"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goDice" />
+
+    <Button
+        android:id="@+id/goMusicList"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:text="음악 리스트 보기"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goWiseSaying" />
+
+    <Button
+        android:id="@+id/goDiet"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:text="다이어트 앱"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goMusicList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
