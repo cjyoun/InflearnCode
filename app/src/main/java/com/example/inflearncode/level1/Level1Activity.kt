@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.inflearncode.R
 import com.example.inflearncode.level1.dice.DiceActivity
+import com.example.inflearncode.level1.dietmemo.DietMemoSplashActivity
 import com.example.inflearncode.level1.firebasepractice.FirebasePracticeActivity
 import com.example.inflearncode.level1.musiclist.MusicActivity
 import com.example.inflearncode.level1.picturechicken.ChickenPictureActivity
@@ -63,7 +64,7 @@ class Level1Activity : AppCompatActivity() {
         // 다이어트 앱  페이지 이동
         val goDietBtn = findViewById<Button>(R.id.goDiet)
         goDietBtn.setOnClickListener{
-            val goDietActivity = Intent(this, FirebasePracticeActivity::class.java)
+            val goDietActivity = Intent(this, DietMemoSplashActivity::class.java)
             startActivity(goDietActivity)
         }
 

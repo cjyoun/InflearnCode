@@ -21,9 +21,12 @@
         <entry key="app/src/main/res/layout/activity_chicken_picture.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_dice.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/activity_diet.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/activity_diet_memo.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/activity_diet_memo_splash.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/activity_level1.xml" value="0.34556159420289856" />
         <entry key="app/src/main/res/layout/activity_pizza_picture.xml" value="0.34556159420289856" />
         <entry key="app/src/main/res/layout/activity_wise_saying.xml" value="0.1625" />
+        <entry key="app/src/main/res/layout/cutom_dialog.xml" value="0.1765625" />
       </map>
     </option>
   </component>
