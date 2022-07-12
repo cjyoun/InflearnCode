@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.EditText
-import android.widget.ImageView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.example.inflearncode.R
 import com.example.inflearncode.level1.dietmemo.model.DataModel
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.time.DayOfWeek
@@ -19,9 +20,44 @@ import java.time.Year
 import java.util.*
 
 class DietMemoActivity : AppCompatActivity() {
+
+    private val dataModelList = mutableListOf<DataModel>()  // adapter에 넣어줄 모델
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diet_memo)
+
+        // firebase database
+        val database = Firebase.database
+        val myRef = database.getReference("myMemo")
+
+//      myRef.setValue("~~~~")  // database에 데이터 넣기 (중복된 데이터는 더 쌓이지 않음)
+//      myRef.push().setValue("!!!!!")  // database에 중복되더라도 입력되는대로 데이터 넣기
+
+        val listView = findViewById<ListView>(R.id.memoListView)
+
+        val memoAdapter = MemoListViewAdapter(dataModelList)
+
+        listView.adapter = memoAdapter
+
+        // database 값 가져오기 (.child(Firebase.auth.currentUser!!.uid) 를 붙여줌으로 현재 유저에 해당하는 값을 가져오기)
+        myRef.child(Firebase.auth.currentUser!!.uid).addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                dataModelList.clear()   // 이전에 저장된 값들 초기화화
+
+               for (dataModel in snapshot.children){
+                    Log.d("Data", dataModel.toString())
+                    dataModelList.add(dataModel.getValue(DataModel::class.java)!!) // dataModelList에 firebase에서 가져온 값 넣기
+                }
+                memoAdapter.notifyDataSetChanged() // 데이터 모델리스트가 다 넣어지면 adapter를 새롭게 생성하라는 기능.
+                Log.d("DataModel", dataModelList.toString())
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
 
 
         val writeBtn = findViewById<ImageView>(R.id.writeBtn)
@@ -66,16 +102,14 @@ class DietMemoActivity : AppCompatActivity() {
             saveBtn?.setOnClickListener {
 
                 val healthMemo = mAlertDialog.findViewById<EditText>(R.id.healthMemo).toString()   // 메모 내용
-
                 // firebase database
                 val database = Firebase.database
-                val myRef = database.getReference("message")
-
-//                myRef.setValue("~~~~")  // database에 데이터 넣기 (중복된 데이터는 더 쌓이지 않음)
-//                myRef.push().setValue("!!!!!")  // database에 중복되더라도 입력되는대로 데이터 넣기
+                val myRef = database.getReference("myMemo").child(Firebase.auth.currentUser!!.uid) // 데이터베이스에 값이 쌓일 때 현재 유저의 uid값에 데이터가 쌓이도록
 
                 val model = DataModel(dateText, healthMemo)
                 myRef.push().setValue(model)    // 모델값 database에 저장하기
+
+                mAlertDialog.dismiss() // dialog 끄기
 
             }
 
