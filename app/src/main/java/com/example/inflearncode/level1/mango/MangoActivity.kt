@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -68,7 +69,11 @@ class MangoActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = GridLayoutManager(this, 2) // 한 열에 두 행이 보이도록 하기 , RecyclerView가 어떤 Layout으로 보일지
 
-
+        // 북마크 버튼 클릭 시
+        val bookmarkBtn = findViewById<TextView>(R.id.bookmarkBtn)
+        bookmarkBtn.setOnClickListener {
+            startActivity(Intent(this, MangoBookmartActivity::class.java))
+        }
 
 
     }

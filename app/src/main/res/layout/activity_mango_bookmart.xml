@@ -4,32 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".level1.mango.MangoActivity">
+    tools:context=".level1.mango.MangoBookmartActivity">
 
     <TextView
-        android:id="@+id/bookmarkBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="@drawable/radius"
-        android:fontFamily="@font/bmjua_ttf"
-        android:padding="6dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
         android:text="북마크"
-        android:textColor="@color/black"
-        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mangoRV"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bookmarkRV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mangoRV"
         android:layout_marginTop="60dp"
+        android:id="@+id/bookmarkRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
