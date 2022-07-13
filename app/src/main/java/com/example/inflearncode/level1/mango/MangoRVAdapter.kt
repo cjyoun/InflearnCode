@@ -18,7 +18,21 @@ class MangoRVAdapter(val context: Context, val list : MutableList<ContentsModel>
         return ViewHoler(v)
     }
 
+    // RecyclerView의 item 들에 클릭 이벤트 주기
+    interface ItemClick{
+        fun onClick(view: View, position: Int)
+    }
+    var itemClick : ItemClick? = null
+
     override fun onBindViewHolder(holder: MangoRVAdapter.ViewHoler, position: Int) {
+
+        // RecyclerView의 item 들에 클릭 이벤트 주기
+        if(itemClick != null){
+            holder?.itemView.setOnClickListener{ v->
+                itemClick!!.onClick(v, position)
+            }
+        }
+
         holder.bindiTems(list[position])
     }
 
@@ -27,7 +41,7 @@ class MangoRVAdapter(val context: Context, val list : MutableList<ContentsModel>
     }
 
 
-    inner class ViewHoler(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class ViewHoler(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindiTems(item: ContentsModel) {
 

@@ -1,7 +1,9 @@
 package com.example.inflearncode.level1.mango
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -51,6 +53,17 @@ class MangoActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.mangoRV) // xml에서 RecylerView id 값 가져오기
         val rvAdapter = MangoRVAdapter(baseContext, items)   // 생성한 RecyclerViewAdapter 에 items 넣기
         recyclerView.adapter = rvAdapter    // xml 의 RecylerView의 adapter에 생성한 adapter 넣기
+
+        // RecyclerView의 item 들에 클릭 이벤트 주기
+        rvAdapter.itemClick = object : MangoRVAdapter.ItemClick{
+            override fun onClick(view: View, position: Int) {
+                val intent = Intent(baseContext, MangoWebViewActivity::class.java)
+                intent.putExtra("url", items[position].url) // 선택된 url 전달
+                startActivity(intent)
+            }
+
+        }
+
         recyclerView.layoutManager = GridLayoutManager(this, 2) // 한 열에 두 행이 보이도록 하기 , RecyclerView가 어떤 Layout으로 보일지
 
 
