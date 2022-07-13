@@ -13,6 +13,7 @@
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_picture.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_splash.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_splash_pizza.xml" value="0.25364583333333335" />
+        <entry key="app/src/main/res/drawable/radius.xml" value="0.251" />
         <entry key="app/src/main/res/layout/activity_chicken1.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_chicken2.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_chicken3.xml" value="0.17760416666666667" />
@@ -24,10 +25,13 @@
         <entry key="app/src/main/res/layout/activity_diet_memo.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_diet_memo_splash.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/activity_level1.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_mango.xml" value="0.24635416666666668" />
         <entry key="app/src/main/res/layout/activity_mango_splash.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/activity_pizza_picture.xml" value="0.34556159420289856" />
         <entry key="app/src/main/res/layout/activity_wise_saying.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/cutom_dialog.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/mango_rv_item.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/mangolistview.xml" value="0.2453125" />
       </map>
     </option>
   </component>
