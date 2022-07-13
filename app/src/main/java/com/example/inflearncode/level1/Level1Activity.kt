@@ -8,6 +8,7 @@ import com.example.inflearncode.R
 import com.example.inflearncode.level1.dice.DiceActivity
 import com.example.inflearncode.level1.dietmemo.DietMemoSplashActivity
 import com.example.inflearncode.level1.firebasepractice.FirebasePracticeActivity
+import com.example.inflearncode.level1.mango.MangoSplashActivity
 import com.example.inflearncode.level1.musiclist.MusicActivity
 import com.example.inflearncode.level1.picturechicken.ChickenPictureActivity
 import com.example.inflearncode.level1.picturepizza.PizzaPictureActivity
@@ -66,6 +67,13 @@ class Level1Activity : AppCompatActivity() {
         goDietBtn.setOnClickListener{
             val goDietActivity = Intent(this, DietMemoSplashActivity::class.java)
             startActivity(goDietActivity)
+        }
+
+        // 망고 플레이트  페이지 이동
+        val goMangoBtn = findViewById<Button>(R.id.goMango)
+        goMangoBtn.setOnClickListener{
+            val goMangoActivity = Intent(this, MangoSplashActivity::class.java)
+            startActivity(goMangoActivity)
         }
 
 
