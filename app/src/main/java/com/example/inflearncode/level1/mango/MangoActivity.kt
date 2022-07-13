@@ -59,6 +59,8 @@ class MangoActivity : AppCompatActivity() {
             override fun onClick(view: View, position: Int) {
                 val intent = Intent(baseContext, MangoWebViewActivity::class.java)
                 intent.putExtra("url", items[position].url) // 선택된 url 전달
+                intent.putExtra("imaUrl", items[position].imageUrl) // 선택된 imageUrl 전달
+                intent.putExtra("title", items[position].titleText) // 선택된 titleText 전달
                 startActivity(intent)
             }
 

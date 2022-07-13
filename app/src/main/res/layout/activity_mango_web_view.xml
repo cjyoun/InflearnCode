@@ -6,7 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".level1.mango.MangoWebViewActivity">
 
+    <TextView
+        android:id="@+id/saveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:textSize="25dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <WebView
+        android:layout_marginTop="50dp"
         android:id="@+id/mangoWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
