@@ -16,19 +16,13 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".CommunityJoinActivity"
+            android:name=".level2.view.CommunityJoinActivity"
             android:exported="false" />
         <activity
-            android:name=".CommunityLoginActivity"
+            android:name=".level2.view.CommunityLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".JoinActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CommunityIntroActivity"
+            android:name=".level2.view.CommunityIntroActivity"
             android:exported="false" />
         <activity
             android:name=".level2.CommunitySplashActivity"
@@ -36,6 +30,7 @@
         <activity
             android:name=".level2.CommunityMainActivity"
             android:exported="false" />
+        <!--level1=========================================================== -->
         <activity
             android:name=".level1.mango.MangoBookmartActivity"
             android:exported="false" />
