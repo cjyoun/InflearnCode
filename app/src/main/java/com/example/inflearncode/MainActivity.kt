@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.example.inflearncode.level1.Level1Activity
+import com.example.inflearncode.level2.CommunitySplashActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,10 +19,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val goLevel1 = findViewById<Button>(R.id.goLevel1)
-
         goLevel1.setOnClickListener{
             val goLevel1Activity = Intent(this, Level1Activity::class.java)
             startActivity(goLevel1Activity)
+        }
+
+
+        val goLevel2 = findViewById<Button>(R.id.goLevel2)
+        goLevel2.setOnClickListener{
+            val goLevel2Activity = Intent(this, CommunitySplashActivity::class.java)
+            startActivity(goLevel2Activity)
         }
 
 

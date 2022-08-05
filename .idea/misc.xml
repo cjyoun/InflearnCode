@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/drawable-v24/background_radius_yellow.xml" value="0.165" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/drawable/background_radius.xml" value="0.1645" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken1.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken2.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken3.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken4.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken5.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_intro.xml" value="0.140625" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_join.xml" value="0.140625" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_login.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_splash.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_level1.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_picture.xml" value="0.36614583333333334" />

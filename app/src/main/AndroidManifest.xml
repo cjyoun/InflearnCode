@@ -16,13 +16,34 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MangoBookmartActivity"
+            android:name=".CommunityJoinActivity"
             android:exported="false" />
         <activity
-            android:name=".MangoJoinActivity"
+            android:name=".CommunityLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MangoWebViewActivity"
+            android:name=".JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CommunityIntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".level2.CommunitySplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".level2.CommunityMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".level1.mango.MangoBookmartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".level1.mango.MangoJoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".level1.mango.MangoWebViewActivity"
             android:exported="false" />
         <activity
             android:name=".level1.mango.MangoSplashActivity"
