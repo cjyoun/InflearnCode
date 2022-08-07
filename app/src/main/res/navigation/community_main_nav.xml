@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/community_main_nav">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/community_main_nav"
+    app:startDestination="@id/communityHomeFragment">
+    <fragment
+        android:id="@+id/communityHomeFragment"
+        android:name="com.example.inflearncode.level2.view.fragment.CommunityHomeFragment"
+        android:label="fragment_community_home"
+        tools:layout="@layout/fragment_community_home" >
+        <action
+            android:id="@+id/action_communityHomeFragment_to_communityBookmarkFragment"
+            app:destination="@id/communityBookmarkFragment" />
+        <action
+            android:id="@+id/action_communityHomeFragment_to_communityStoreFragment"
+            app:destination="@id/communityStoreFragment" />
+        <action
+            android:id="@+id/action_communityHomeFragment_to_communityTalkFragment"
+            app:destination="@id/communityTalkFragment" />
+        <action
+            android:id="@+id/action_communityHomeFragment_to_communityTipFragment"
+            app:destination="@id/communityTipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityBookmarkFragment"
+        android:name="com.example.inflearncode.level2.view.fragment.CommunityBookmarkFragment"
+        android:label="fragment_community_bookmark"
+        tools:layout="@layout/fragment_community_bookmark" >
+        <action
+            android:id="@+id/action_communityBookmarkFragment_to_communityHomeFragment"
+            app:destination="@id/communityHomeFragment" />
+        <action
+            android:id="@+id/action_communityBookmarkFragment_to_communityTalkFragment"
+            app:destination="@id/communityTalkFragment" />
+        <action
+            android:id="@+id/action_communityBookmarkFragment_to_communityTipFragment"
+            app:destination="@id/communityTipFragment" />
+        <action
+            android:id="@+id/action_communityBookmarkFragment_to_communityStoreFragment"
+            app:destination="@id/communityStoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityStoreFragment"
+        android:name="com.example.inflearncode.level2.view.fragment.CommunityStoreFragment"
+        android:label="fragment_community_store"
+        tools:layout="@layout/fragment_community_store" >
+        <action
+            android:id="@+id/action_communityStoreFragment_to_communityTipFragment"
+            app:destination="@id/communityTipFragment" />
+        <action
+            android:id="@+id/action_communityStoreFragment_to_communityTalkFragment"
+            app:destination="@id/communityTalkFragment" />
+        <action
+            android:id="@+id/action_communityStoreFragment_to_communityBookmarkFragment"
+            app:destination="@id/communityBookmarkFragment" />
+        <action
+            android:id="@+id/action_communityStoreFragment_to_communityHomeFragment"
+            app:destination="@id/communityHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityTalkFragment"
+        android:name="com.example.inflearncode.level2.view.fragment.CommunityTalkFragment"
+        android:label="fragment_community_talk"
+        tools:layout="@layout/fragment_community_talk" >
+        <action
+            android:id="@+id/action_communityTalkFragment_to_communityTipFragment"
+            app:destination="@id/communityTipFragment" />
+        <action
+            android:id="@+id/action_communityTalkFragment_to_communityBookmarkFragment"
+            app:destination="@id/communityBookmarkFragment" />
+        <action
+            android:id="@+id/action_communityTalkFragment_to_communityStoreFragment"
+            app:destination="@id/communityStoreFragment" />
+        <action
+            android:id="@+id/action_communityTalkFragment_to_communityHomeFragment"
+            app:destination="@id/communityHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityTipFragment"
+        android:name="com.example.inflearncode.level2.view.fragment.CommunityTipFragment"
+        android:label="fragment_community_tip"
+        tools:layout="@layout/fragment_community_tip" >
+        <action
+            android:id="@+id/action_communityTipFragment_to_communityStoreFragment"
+            app:destination="@id/communityStoreFragment" />
+        <action
+            android:id="@+id/action_communityTipFragment_to_communityTalkFragment"
+            app:destination="@id/communityTalkFragment" />
+        <action
+            android:id="@+id/action_communityTipFragment_to_communityBookmarkFragment"
+            app:destination="@id/communityBookmarkFragment" />
+        <action
+            android:id="@+id/action_communityTipFragment_to_communityHomeFragment"
+            app:destination="@id/communityHomeFragment" />
+    </fragment>
 </navigation>
