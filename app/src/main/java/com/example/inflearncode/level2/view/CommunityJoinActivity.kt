@@ -3,6 +3,7 @@ package com.example.inflearncode.level2.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.inflearncode.R
@@ -30,9 +31,9 @@ class CommunityJoinActivity : AppCompatActivity() {
 
             var isGoToJoin = true   // 조건을 만족하는지 여부 체크
 
-            val joinEmail = binding.communityJoinEmail.toString()
-            val joinPassword = binding.communityJoinPassword.toString()
-            val joinPassword2 = binding.communityJoinPassword2.toString()
+            val joinEmail = binding.communityJoinEmail.text.toString()
+            val joinPassword = binding.communityJoinPassword.text.toString()
+            val joinPassword2 = binding.communityJoinPassword2.text.toString()
 
             // 값이 비어있는지 확인
             if(joinEmail.isEmpty()){
@@ -49,7 +50,7 @@ class CommunityJoinActivity : AppCompatActivity() {
             }
 
             // 비밀번호 두개가 같은지 확인
-            if(joinPassword != joinPassword2){
+            if(!joinPassword.equals(joinPassword2) ){
                 Toast.makeText(this,"비밀번호를 똑같이 입력해 주세요.",Toast.LENGTH_LONG).show()
                 isGoToJoin = false
             }
@@ -74,7 +75,12 @@ class CommunityJoinActivity : AppCompatActivity() {
                             startActivity(intent)
 
                         } else {
-                            Toast.makeText(this,"회원가입 실패",Toast.LENGTH_LONG).show()
+                            var exceptionMessage = ""
+                            val taskException = task.exception?.message.toString()
+                            if(taskException=="The email address is badly formatted."){
+                                exceptionMessage = "이메일 형식이 올바르지 않습니다."
+                            }
+                            Toast.makeText(this,"회원가입 실패 - $exceptionMessage",Toast.LENGTH_LONG).show()
                         }
                     }
             }
