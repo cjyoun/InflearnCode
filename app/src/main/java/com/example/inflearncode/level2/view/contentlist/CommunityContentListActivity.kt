@@ -128,7 +128,7 @@ class CommunityContentListActivity : AppCompatActivity() {
 
                 }
                 Log.d("bookmarkIdList", bookmarkIdList.toString())
-
+                rvAdapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
