@@ -69,7 +69,7 @@ class CommunityContentListActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-
+                Log.w("CommunityContentList","loadPost:onCancelled",error.toException())
             }
         }
         myRef.addValueEventListener(postListener)
@@ -132,7 +132,7 @@ class CommunityContentListActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.d("dataModel", "에러")
+                Log.w("CommunityContentList","loadPost:onCancelled2",error.toException())
             }
         }
         FirebaseRef.bookmarkRef.child(FirebaseAuth.getUid()).addValueEventListener(postListener)
