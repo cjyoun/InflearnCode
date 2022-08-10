@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".level2.view.fragment.CommunityTipFragment">
@@ -15,7 +15,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginBottom="70dp">
+                tools:layout_editor_absoluteY="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -26,19 +26,48 @@
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_all"/>
+                        android:src="@drawable/main_icon_all" />
+
                     <ImageView
                         android:id="@+id/category2"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_cook"/>
+                        android:src="@drawable/main_icon_cook" />
+
                     <ImageView
                         android:id="@+id/category3"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_economy"/>
+                        android:src="@drawable/main_icon_economy" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category3" />
 
                 </LinearLayout>
 
@@ -51,21 +80,51 @@
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_else"/>
+                        android:src="@drawable/main_icon_else" />
+
                     <ImageView
                         android:id="@+id/category5"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_hobby"/>
+                        android:src="@drawable/main_icon_hobby" />
+
                     <ImageView
                         android:id="@+id/category6"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_interior"/>
+                        android:src="@drawable/main_icon_interior" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category6" />
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -76,17 +135,46 @@
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_life"/>
+                        android:src="@drawable/main_icon_life" />
+
                     <ImageView
                         android:id="@+id/category8"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_weight="1"
-                        android:src="@drawable/main_icon_oneroom"/>
+                        android:src="@drawable/main_icon_oneroom" />
+
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category7" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="category8" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="" />
 
                 </LinearLayout>
 
