@@ -8,10 +8,12 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.example.inflearncode.R
-import com.example.inflearncode.databinding.ActivityCommunityBoardInsideMainBinding
+import com.example.inflearncode.databinding.ActivityCommunityBoardInsideBinding
+import com.example.inflearncode.level2.util.FBAuth
 import com.example.inflearncode.level2.util.FBRef
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.database.DataSnapshot
@@ -21,10 +23,10 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import java.lang.Exception
 
-class CommunityBoardInsideMainActivity : AppCompatActivity() {
+class CommunityBoardInsideActivity : AppCompatActivity() {
 
-    private val TAG = CommunityBoardInsideMainActivity::class.java.simpleName
-    private lateinit var binding : ActivityCommunityBoardInsideMainBinding
+    private val TAG = CommunityBoardInsideActivity::class.java.simpleName
+    private lateinit var binding : ActivityCommunityBoardInsideBinding
 
     private var key = ""
 
@@ -32,7 +34,7 @@ class CommunityBoardInsideMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // setContentView(R.layout.activity_community_board_inside_main)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_community_board_inside_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_community_board_inside)
 
         // 첫번째 방법 - Intent로 데이터들 다 넘겨서 이동된 Activity에서 보여주기
 //        val title = intent.getStringExtra("title")
@@ -75,6 +77,15 @@ class CommunityBoardInsideMainActivity : AppCompatActivity() {
                     binding.boardTitleArea.text = dataModel!!.title
                     binding.boardContentArea.text = dataModel!!.content
                     binding.boardTimeArea.text = dataModel!!.time
+
+                    val myUid = FBAuth.getUid()
+                    val writerUid = dataModel.uid
+                    if(myUid.equals(writerUid)){
+                        Log.d(TAG, "내가 쓴글")
+                        binding.boardSettingIcon.isVisible = true  // 버튼 보여주기
+                    } else {
+                        Log.d(TAG, "내가 쓴글 아님")
+                    }
 
                 } catch (e:Exception){
                     Log.d(TAG, "삭제완료 - 삭제로 인한 exception발생")

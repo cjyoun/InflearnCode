@@ -12,7 +12,7 @@ import androidx.navigation.findNavController
 import com.example.inflearncode.R
 import com.example.inflearncode.databinding.FragmentCommunityTalkBinding
 import com.example.inflearncode.level2.util.FBRef
-import com.example.inflearncode.level2.view.board.CommunityBoardInsideMainActivity
+import com.example.inflearncode.level2.view.board.CommunityBoardInsideActivity
 import com.example.inflearncode.level2.view.board.CommunityBoardListAdapter
 import com.example.inflearncode.level2.view.board.CommunityBoardModel
 import com.example.inflearncode.level2.view.board.CommunityBoardWriteActivity
@@ -57,7 +57,7 @@ class CommunityTalkFragment : Fragment() {
 //            startActivity(intent)
 
             // 두번째 방법 - id값을 가지고 firebase에서 가져오기
-            val intent = Intent(context, CommunityBoardInsideMainActivity::class.java)
+            val intent = Intent(context, CommunityBoardInsideActivity::class.java)
             intent.putExtra("key",boardKeyList[position])
             startActivity(intent)
 

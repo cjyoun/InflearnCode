@@ -23,7 +23,7 @@
             android:name=".level2.view.board.CommunityBoardEditActivity"
             android:exported="false" />
         <activity
-            android:name=".level2.view.board.CommunityBoardInsideMainActivity"
+            android:name=".level2.view.board.CommunityBoardInsideActivity"
             android:exported="false" />
         <activity
             android:name=".level2.view.board.CommunityBoardWriteActivity"

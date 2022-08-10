@@ -5,7 +5,7 @@
     <LinearLayout
         android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".level2.view.board.CommunityBoardInsideMainActivity"
+    tools:context=".level2.view.board.CommunityBoardInsideActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -30,6 +30,7 @@
 
             <ImageView
                 android:id="@+id/boardSettingIcon"
+                android:visibility="invisible"
                 android:layout_width="20dp"
                 android:layout_height="40dp"
                 android:src="@drawable/main_menu"
