@@ -15,6 +15,8 @@ import com.example.inflearncode.R
 import com.example.inflearncode.databinding.ActivityCommunityBoardInsideBinding
 import com.example.inflearncode.level2.util.FBAuth
 import com.example.inflearncode.level2.util.FBRef
+import com.example.inflearncode.level2.view.comment.CommunityBoardCommentLVAdapter
+import com.example.inflearncode.level2.view.comment.CommunityBoardCommentModel
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -28,7 +30,9 @@ class CommunityBoardInsideActivity : AppCompatActivity() {
     private val TAG = CommunityBoardInsideActivity::class.java.simpleName
     private lateinit var binding : ActivityCommunityBoardInsideBinding
 
-    private var key = ""
+    private lateinit var key :String
+    private val commentDataList = mutableListOf<CommunityBoardCommentModel>()
+    private lateinit var commentLVAdapter: CommunityBoardCommentLVAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +63,18 @@ class CommunityBoardInsideActivity : AppCompatActivity() {
             Log.d(TAG,"dkdkdk?")
             showDialog()
         }
+
+        // 댓글 저장 버튼 눌렀을 경우
+        binding.communityCommentBtn.setOnClickListener {
+            insertComment(key)
+        }
+
+
+        commentLVAdapter = CommunityBoardCommentLVAdapter(commentDataList)
+        binding.commentLV.adapter = commentLVAdapter
+
+        // 댓글 데이터 가져오기
+        getCommentData(key)
 
 
     }
@@ -116,7 +132,7 @@ class CommunityBoardInsideActivity : AppCompatActivity() {
                     .load(task.result)
                     .into(imageViewFromFB)
             }else{
-
+                binding.boardImgArea.isVisible =false // 이미지 없을 때 영역 숨기기
             }
         })
 
@@ -146,6 +162,45 @@ class CommunityBoardInsideActivity : AppCompatActivity() {
             Toast.makeText(this,"삭제",Toast.LENGTH_SHORT).show()
             finish()
         }
+
+    }
+
+    // 댓글을 게시글 key 값 하위에 내용을 저장 (comment라는 DB에다가)
+    private fun insertComment(key : String){
+        FBRef.commentRef
+            .child(key)
+            .push()
+            .setValue(
+                CommunityBoardCommentModel(
+                    binding.communityCommentArea.text.toString(),
+                    FBAuth.getTime()
+                )
+            )
+
+        Toast.makeText(this, "댓글 완료", Toast.LENGTH_LONG).show()
+        binding.communityCommentArea.setText("")
+    }
+
+    // 댓글 데이터 가져오기
+    private fun getCommentData(key: String){
+        val postListener = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                commentDataList.clear()
+
+                for(dataModel in snapshot.children){
+                    val item = dataModel.getValue(CommunityBoardCommentModel::class.java)
+                    commentDataList.add(item!!)
+
+                }
+
+                commentLVAdapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.w(TAG,"loadPost:onCancelled2",error.toException())
+            }
+        }
+        FBRef.commentRef.child(key).addValueEventListener(postListener)
     }
 
 }
