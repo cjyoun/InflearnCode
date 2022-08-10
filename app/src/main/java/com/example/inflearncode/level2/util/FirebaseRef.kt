@@ -9,8 +9,8 @@ class FirebaseRef {
 
         private val database = Firebase.database
 
-        val category1 = database.getReference("category1")      // 카테고리1(ALL) 데이터 베이스
-        val category2 = database.getReference("category2")
+        val category1 = database.getReference("contents1")      // 카테고리1(ALL) 데이터 베이스
+        val category2 = database.getReference("contents2")
 
         val bookmarkRef = database.getReference("bookmark_list")
 

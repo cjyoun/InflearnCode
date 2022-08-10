@@ -59,44 +59,13 @@ class CommunityBookmarkRVAdapter (
             val imageViewArea = itemView.findViewById<ImageView>(R.id.imageArea)
             Glide.with(context).load(item.imageUrl).into(imageViewArea)
 
-
             val bookMarkArea = itemView.findViewById<ImageView>(R.id.bookmarkArea)
-
             // bookmarkIdList에 있는 값 중에 선택한 북마크의 key 값이 있다면 검정색으로 없다면 하얀색으로
             if(bookmarkIdList.contains(key)){
                 bookMarkArea.setImageResource(R.drawable.bookmark_color)
             } else {
                 bookMarkArea.setImageResource(R.drawable.bookmark_white)
             }
-
-            // 북마크 클릭
-            bookMarkArea.setOnClickListener {
-                Log.d("북마크 클릭 ", FirebaseAuth.getUid())
-                Toast.makeText(context, "${item.title} 북마크 클릭 - $key", Toast.LENGTH_LONG).show()
-
-                // 북마크가 있을 때
-                if(bookmarkIdList.contains(key)){
-                    // bookmarkIdList에서도 클릭한 key 값을 빼서 색깔이 변경되도록 함.
-                    bookmarkIdList.remove(key)
-
-                    // Firebase DB에 해당 기기의 uid 아래에 클릭한 북마크에 해당하는 key 값을 삭제
-                    FirebaseRef.bookmarkRef
-                        .child(FirebaseAuth.getUid())
-                        .child(key)
-                        .removeValue()
-                } else{
-                    // 북마크가 없을 때
-                    // Firebase DB에 해당 기기의 uid 아래에 클릭한 북마크에 해당하는 key 값을 저장
-                    FirebaseRef.bookmarkRef
-                        .child(FirebaseAuth.getUid())
-                        .child(key)
-                        .setValue(CommunityBookmarkModel(true))
-                }
-
-
-            }
-
-
 
 
         }
