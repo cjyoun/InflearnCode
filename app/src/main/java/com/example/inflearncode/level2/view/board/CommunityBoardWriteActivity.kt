@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.inflearncode.R
 import com.example.inflearncode.databinding.ActivityCommunityBoardWriteBinding
-import com.example.inflearncode.level2.util.FirebaseAuth
-import com.example.inflearncode.level2.util.FirebaseRef
+import com.example.inflearncode.level2.util.FBAuth
+import com.example.inflearncode.level2.util.FBRef
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import java.io.ByteArrayOutputStream
@@ -33,8 +33,8 @@ class CommunityBoardWriteActivity : AppCompatActivity() {
 
             val title = binding.titleArea.text.toString()
             val content = binding.contentArea.text.toString()
-            val uid = FirebaseAuth.getUid()
-            val time = FirebaseAuth.getTime()
+            val uid = FBAuth.getUid()
+            val time = FBAuth.getTime()
 
             // firebase storage에 이미지를 저장하려고 할 때
             // 게시글을 선택하면 그 게시글의 데이터를 가져오는 것 처럼 이미지도 가져오기 위해서
@@ -42,10 +42,10 @@ class CommunityBoardWriteActivity : AppCompatActivity() {
             // (이미지 이름을 모르기 때문에 key값으로 저장시키는 것)
 
             // 랜덤한 키값
-            val key = FirebaseRef.boardRef.push().key.toString()
+            val key = FBRef.boardRef.push().key.toString()
 
             // firebase에 게시글 데이터 저장 -> 키값으로 push 됨
-            FirebaseRef.boardRef
+            FBRef.boardRef
                 .child(key)
                 .setValue(CommunityBoardModel(title,content,uid,time))
 

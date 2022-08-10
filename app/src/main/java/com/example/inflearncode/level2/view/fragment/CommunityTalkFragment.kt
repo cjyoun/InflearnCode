@@ -10,10 +10,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.inflearncode.R
-import com.example.inflearncode.databinding.FragmentCommunityStoreBinding
 import com.example.inflearncode.databinding.FragmentCommunityTalkBinding
-import com.example.inflearncode.level2.util.FirebaseAuth
-import com.example.inflearncode.level2.util.FirebaseRef
+import com.example.inflearncode.level2.util.FBRef
 import com.example.inflearncode.level2.view.board.CommunityBoardInsideMainActivity
 import com.example.inflearncode.level2.view.board.CommunityBoardListAdapter
 import com.example.inflearncode.level2.view.board.CommunityBoardModel
@@ -129,7 +127,7 @@ class CommunityTalkFragment : Fragment() {
                 Log.w("CommunityContentList","loadPost:onCancelled2",error.toException())
             }
         }
-        FirebaseRef.boardRef.addValueEventListener(postListener)
+        FBRef.boardRef.addValueEventListener(postListener)
     }
 
 }

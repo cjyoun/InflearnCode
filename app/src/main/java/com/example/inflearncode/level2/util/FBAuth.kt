@@ -4,7 +4,7 @@ import com.google.firebase.auth.FirebaseAuth
 import java.text.SimpleDateFormat
 import java.util.*
 
-class FirebaseAuth {
+class FBAuth {
 
     companion object{
         private lateinit var auth: FirebaseAuth

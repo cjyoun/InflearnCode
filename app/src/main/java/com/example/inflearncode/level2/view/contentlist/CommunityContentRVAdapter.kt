@@ -12,8 +12,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.inflearncode.R
-import com.example.inflearncode.level2.util.FirebaseAuth
-import com.example.inflearncode.level2.util.FirebaseRef
+import com.example.inflearncode.level2.util.FBAuth
+import com.example.inflearncode.level2.util.FBRef
 
 class CommunityContentRVAdapter (
         val context: Context,       // context
@@ -71,7 +71,7 @@ class CommunityContentRVAdapter (
 
             // 북마크 클릭
             bookMarkArea.setOnClickListener {
-                Log.d("북마크 클릭 ", FirebaseAuth.getUid())
+                Log.d("북마크 클릭 ", FBAuth.getUid())
                 Toast.makeText(context, "${item.title} 북마크 클릭 - $key", Toast.LENGTH_LONG).show()
 
                 // 북마크가 있을 때
@@ -80,15 +80,15 @@ class CommunityContentRVAdapter (
                     bookmarkIdList.remove(key)
 
                     // Firebase DB에 해당 기기의 uid 아래에 클릭한 북마크에 해당하는 key 값을 삭제
-                    FirebaseRef.bookmarkRef
-                        .child(FirebaseAuth.getUid())
+                    FBRef.bookmarkRef
+                        .child(FBAuth.getUid())
                         .child(key)
                         .removeValue()
                 } else{
                     // 북마크가 없을 때
                     // Firebase DB에 해당 기기의 uid 아래에 클릭한 북마크에 해당하는 key 값을 저장
-                    FirebaseRef.bookmarkRef
-                        .child(FirebaseAuth.getUid())
+                    FBRef.bookmarkRef
+                        .child(FBAuth.getUid())
                         .child(key)
                         .setValue(CommunityBookmarkModel(true))
                 }

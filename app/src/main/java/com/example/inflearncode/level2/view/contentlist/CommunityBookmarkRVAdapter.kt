@@ -2,7 +2,6 @@ package com.example.inflearncode.level2.view.contentlist
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,8 +11,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.inflearncode.R
-import com.example.inflearncode.level2.util.FirebaseAuth
-import com.example.inflearncode.level2.util.FirebaseRef
 
 class CommunityBookmarkRVAdapter (
     val context: Context,       // context

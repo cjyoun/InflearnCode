@@ -5,12 +5,14 @@
       <map>
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/drawable-v24/background_radius_yellow.xml" value="0.165" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/drawable/background_radius.xml" value="0.1645" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/drawable/community_custom_dialog.xml" value="0.146" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken1.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken2.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken3.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken4.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_chicken5.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_board_inside_main.xml" value="0.13958333333333334" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_board_edit.xml" value="0.11458333333333333" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_board_inside_main.xml" value="0.2" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_board_write.xml" value="0.11822916666666666" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_content_list.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_content_show.xml" value="0.2390625" />
@@ -18,6 +20,7 @@
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_join.xml" value="0.140625" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_login.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_main.xml" value="0.176" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_setting.xml" value="0.1" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_community_splash.xml" value="0.15520833333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_level1.xml" value="0.22146739130434784" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
@@ -27,6 +30,7 @@
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/activity_wise_saying.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/community_board_list_item.xml" value="0.11822916666666666" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/community_content_rv_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/community_custom_dialog.xml" value="0.13697916666666668" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/fragment_community_book_mark.xml" value="0.13958333333333334" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/fragment_community_bookmark.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/chaejaeyoun/StudioProjects/InflearnCode/app/src/main/res/layout/fragment_community_home.xml" value="0.13958333333333334" />

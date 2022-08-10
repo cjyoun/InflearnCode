@@ -1,17 +1,13 @@
 package com.example.inflearncode.level2.view.contentlist
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inflearncode.R
-import com.example.inflearncode.level2.util.FirebaseAuth
-import com.example.inflearncode.level2.util.FirebaseRef
+import com.example.inflearncode.level2.util.FBAuth
+import com.example.inflearncode.level2.util.FBRef
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -135,7 +131,7 @@ class CommunityContentListActivity : AppCompatActivity() {
                 Log.w("CommunityContentList","loadPost:onCancelled2",error.toException())
             }
         }
-        FirebaseRef.bookmarkRef.child(FirebaseAuth.getUid()).addValueEventListener(postListener)
+        FBRef.bookmarkRef.child(FBAuth.getUid()).addValueEventListener(postListener)
 
 
     }

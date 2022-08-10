@@ -12,12 +12,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.inflearncode.R
 import com.example.inflearncode.databinding.FragmentCommunityBookmarkBinding
-import com.example.inflearncode.level1.mango.model.ContentsModel
-import com.example.inflearncode.level2.util.FirebaseAuth
-import com.example.inflearncode.level2.util.FirebaseRef
+import com.example.inflearncode.level2.util.FBAuth
+import com.example.inflearncode.level2.util.FBRef
 import com.example.inflearncode.level2.view.contentlist.CommunityBookmarkRVAdapter
 import com.example.inflearncode.level2.view.contentlist.CommunityContentModel
-import com.example.inflearncode.level2.view.contentlist.CommunityContentRVAdapter
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -112,8 +110,8 @@ class CommunityBookmarkFragment : Fragment() {
                 Log.w(TAG,"loadPost:onCancelled",error.toException())
             }
         }
-        FirebaseRef.category1.addValueEventListener(postListener)   // category1 카테고리
-        FirebaseRef.category2.addValueEventListener(postListener)   // category1 카테고리
+        FBRef.category1.addValueEventListener(postListener)   // category1 카테고리
+        FBRef.category2.addValueEventListener(postListener)   // category1 카테고리
     }
 
 
@@ -136,7 +134,7 @@ class CommunityBookmarkFragment : Fragment() {
                 Log.w(TAG,"loadPost:onCancelled",error.toException())
             }
         }
-        FirebaseRef.bookmarkRef.child(FirebaseAuth.getUid()).addValueEventListener(postListener)    // 북마크 리스트 가져오기
+        FBRef.bookmarkRef.child(FBAuth.getUid()).addValueEventListener(postListener)    // 북마크 리스트 가져오기
     }
 
 
