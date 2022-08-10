@@ -77,7 +77,7 @@ class CommunityBoardWriteActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(requestCode == RESULT_OK && requestCode ==100){
+        if(resultCode == RESULT_OK && requestCode ==100){
             binding.boardImgBtnArea.setImageURI(data?.data)    // 갤러리 선택한 이미지 넣기
         }
     }

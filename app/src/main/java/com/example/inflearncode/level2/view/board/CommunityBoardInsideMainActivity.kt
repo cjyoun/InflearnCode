@@ -76,13 +76,13 @@ class CommunityBoardInsideMainActivity : AppCompatActivity() {
         val storageReference = Firebase.storage.reference.child("$key.png")
 
         // ImageView in your Activity
-        val imageView = binding.boardImgArea
+        val imageViewFromFB = binding.boardImgArea
 
         storageReference.downloadUrl.addOnCompleteListener (OnCompleteListener{ task ->
             if(task.isSuccessful){
                 Glide.with(this)
                     .load(task.result)
-                    .into(imageView)
+                    .into(imageViewFromFB)
             }else{
 
             }
