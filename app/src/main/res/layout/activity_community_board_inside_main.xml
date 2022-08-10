@@ -49,6 +49,11 @@
         android:layout_height="200dp"/>
 
 
+        <ImageView
+            android:id="@+id/boardImgArea"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
 
     </LinearLayout>
 </layout>
